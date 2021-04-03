@@ -29,11 +29,25 @@
     .contact img{
         display: none;
     }
+
+    .header__nav {
+        display: none;
+    }
+    .burger-button {
+        display: block;
+    }
+}
+
+@media(max-width:800px){
+
+    .footer__column{
+        margin-left: 10px;
+    }
 }
 
 @media(max-width:580px){
     .header__content{
-        display: grid;
+        display: flex;
         
     }
     .header__nav-list{
@@ -56,7 +70,7 @@
         padding: 5px 20px;
     }
     .header__logo{
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
     }
     .main-section__title{
         max-width: 400px;
@@ -77,5 +91,9 @@
     .footer__column-title{
         margin-top: 10px;
         margin-bottom: 5px;
+    }
+
+    .header__logo-description {
+        display: none;
     }
 }

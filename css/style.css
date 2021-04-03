@@ -49,30 +49,42 @@ a{
 
 .header__content{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
 .header__logo{
     display: flex;
-    align-items: center;
+    align-items: stretch;
 }
 
 .header__logo-img{
     max-width: 150px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     background-color: #ffffff;
     margin-right:15px;
+    display: flex;
+   
+}
+
+.header__logo-img img {
+    align-self: center;
 }
 
 .header__logo-description{
     color: #ffffff;
     max-width: 90px;
+    align-self: center;
 }
+
 
 .header__nav-list{
     display: flex;
     align-items: center;
+    margin: 0;
 }
+
 
 
 .header__nav-item{
@@ -91,8 +103,18 @@ a{
     transition: text-decoration .5s linear;
 }
 
-.header__nav-link:hover{
-    text-decoration: underline;
+
+.header__nav-list a {
+    padding: 15px 0;
+    text-decoration: none;
+    display: block;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+
+    box-sizing: border-box;
+}
+.header__nav-link:hover {
+    border-bottom: 4px solid #fff;
 }
 
 .main{
@@ -177,7 +199,8 @@ a{
 }
 
 .slider-section__card{
-    max-width: 300px;
+    /* max-width: 300px; */
+    width: 100%;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
     box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     border-radius: 0px 0px 5px 5px;
@@ -245,7 +268,7 @@ a{
 
 .slider-section__btn{
     cursor: pointer;
-    width: 260px;
+    width: 100%;
     border: none;
     background: #E30611;
     border-radius: 3px;
@@ -385,8 +408,51 @@ a{
     margin-right: 15px;
 }
 .swiper-pagination-bullet-active{
-    background: #E30611;;
+    background: #E30611;
     max-width: 60px;
     height: 6px;
     border-radius: 5px;
+}
+
+.burger-button {
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.adaptive-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #E30611;
+    color: #fff;
+    width: 0;
+    height: 100vh;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: width 0.5s;
+}
+
+.times-rt{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.adaptive-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 40px;
+}
+
+.adaptive-menu a {
+    color: #fff;
+    padding: 20px;
+    display: block;
 }
